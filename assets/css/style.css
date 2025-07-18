@@ -23,14 +23,22 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
+
 .hero {
   text-align: center;
   padding: 100px 20px;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("IMG_0156.jpeg");
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("../img/pexels-cottonbro-3171837.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
+  animation: bgMove 30s infinite alternate ease-in-out;
 }
+
+@keyframes bgMove {
+  0% { background-position: center top; }
+  100% { background-position: center bottom; }
+}
+
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 10px;
@@ -39,7 +47,7 @@ nav a {
   font-size: 1.2rem;
 }
 .section {
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin: 40px auto;
   padding: 0 20px;
 }
