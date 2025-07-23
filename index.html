@@ -4,48 +4,76 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sushi Party</title>
-        <link rel="stylesheet" href="./assets/css/reset.css">
+        <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
-        <!-- <link rel="stylesheet" href="./assets/js/script.js"> -->
     </head>
 
-    
     <body>
-<header style="
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    font-family: 'Times New Roman', 'MS Mincho', serif;
-    background-color: #333;
-    color: #F7E7CE;
-    border-bottom: 2px solid #D4AF37;
-    overflow: hidden;
-">
-    <!-- 左 -->
-    <div style="text-align: left; position: relative; z-index: 1;">
-        <div style="font-size: 3.0rem; font-weight: bold;">Sushi</div>
-        <div style="font-size: 3.0rem; font-weight: bold;">Party</div>
-    </div>
+        <header
+            style="
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                font-family: 'Times New Roman', 'MS Mincho', serif;
+                background-color: #333;
+                color: #f7e7ce;
+                border-bottom: 2px solid #d4af37;
+                overflow: hidden;
+            "
+        >
+            <!-- 左 -->
+            <div style="text-align: left; position: relative; z-index: 1">
+                <div style="font-size: 3rem; font-weight: bold">Sushi</div>
+                <div style="font-size: 3rem; font-weight: bold">Party</div>
+            </div>
 
-    <!-- 真ん中 -->
-    <div style="text-align: center; flex-grow: 1; position: relative; z-index: 1;">
-        <div style="font-size: 6rem; font-weight: bold;">寿司</div>
-    </div>
+            <!-- 真ん中 -->
+            <div
+                style="
+                    text-align: center;
+                    flex-grow: 1;
+                    position: relative;
+                    z-index: 1;
+                "
+            >
+                <div style="font-size: 6rem; font-weight: bold">寿司</div>
+            </div>
 
-    <!-- 右：国旗 -->
-    <div style="display: flex; gap: 10px; align-items: center; position: relative; z-index: 1;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg" 
-             alt="Japan Flag" 
-             style="width: 80px; height: auto; border: 1px solid #D4AF37; border-radius: 4px;">
+            <!-- 右：国旗 -->
+            <div
+                style="
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    position: relative;
+                    z-index: 1;
+                "
+            >
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg"
+                    alt="Japan Flag"
+                    style="
+                        width: 80px;
+                        height: auto;
+                        border: 1px solid #d4af37;
+                        border-radius: 4px;
+                    "
+                />
 
-        <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" 
-             alt="UK Flag" 
-             style="width: 80px; height: auto; border: 1px solid #D4AF37; border-radius: 4px;">
-    </div>
-</header>
-
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+                    alt="UK Flag"
+                    style="
+                        width: 80px;
+                        height: auto;
+                        border: 1px solid #d4af37;
+                        border-radius: 4px;
+                    "
+                />
+            </div>
+        </header>
 
         <nav>
             <a href="#contact">Contact</a>
@@ -56,13 +84,14 @@
             <p>Enjoy the best sushi and drinks with friends!</p>
         </section>
 
-
-
         <section class="section" id="menu">
             <h2>Our Menu</h2>
             <div class="menu">
                 <div class="menu-item">
-                    <img src="./assets/img/Easy Tuna Nigiri.jpeg" alt="Tuna Sushi" />
+                    <img
+                        src="./assets/img/Easy Tuna Nigiri.jpeg"
+                        alt="Tuna Sushi"
+                    />
                     <h3>Tuna Sushi</h3>
                     <p>Fresh from Tsukiji Market, Japan.</p>
                 </div>
@@ -91,18 +120,12 @@
                     <p>Locally sourced from Okinawa, Japan.</p>
                 </div>
                 <div class="menu-item">
-                    <img
-                        src="./assets/img/Unagi.jpeg"
-                        alt="Eel Sushi"
-                    />
+                    <img src="./assets/img/Unagi.jpeg" alt="Eel Sushi" />
                     <h3>Eel Sushi</h3>
                     <p>Sweet and fluffy tamago made in-house.</p>
                 </div>
                 <div class="menu-item">
-                    <img
-                        src="./assets/img/_.jpeg"
-                        alt="Egg Sushi"
-                    />
+                    <img src="./assets/img/_.jpeg" alt="Egg Sushi" />
                     <h3>Egg Sushi</h3>
                     <p>Fresh Alaskan crab meat.</p>
                 </div>
@@ -117,8 +140,7 @@
             </div>
         </section>
 
-
-        <h2 style="font-size: 2.5rem; text-align: center">Contact Us</h2>
+        <h2 id="contact" style="font-size: 2.5rem; text-align: center">Contact Us</h2>
         <div
             style="
                 display: flex;
@@ -198,27 +220,138 @@
             </div>
         </div>
         <!-- カレンダー -->
-        
+
         <section class="section" id="calendar-section">
             <h2>Sushi Calendar</h2>
             <div id="calendar"></div>
         </section>
 
-        <!-- CSSをstyle.css側に移してもOK -->
-        <style>
-            #calendar {
-                max-width: 900px;
-                margin: 0 auto;
-                background: #fff;
-                padding: 20px;
-                border-radius: 12px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            }
-            .fc-daygrid-day-number {
-                color: black !important;
-            }
-        </style>
+        <!-- カレンダー終了 -->
 
+        <!-- 新しいところ -->
+        <section class="section" id="pricing">
+            <h2>Pricing</h2>
+            <ul>
+                <li>3 Hours: £1,000🌊</li>
+                <li>5 Hours: £1,500🪼</li>
+            </ul>
+        </section>
+
+        <section class="section" id="news">
+            <h2>Latest News</h2>
+
+            <div class="news-list">
+                <div class="news-item">
+                    <img src="./assets/img/….jpeg" alt="News 1" />
+                    <p>
+                        We use fresh fish from the UK, sourced from the North
+                        Sea, the Atlantic Ocean, and the Scottish coast.
+                    </p>
+                </div>
+
+                <div class="news-item">
+                    <img src="./assets/img/炙り牛寿司.jpeg" alt="News 2" />
+                    <p>
+                        We’ve started serving meat sushi.
+
+                        <!--肉寿司始めました-->
+                    </p>
+                </div>
+                <div class="news-item">
+                    <img
+                        src="./assets/img/天ぷら　盛り合わせ - Adobe Stock でこのストック画像を購入して、類似の画像をさらに検索….jpeg"
+                        alt="News 3"
+                    />
+                    <p>
+                        We’ve also started serving tempura. .
+                        <!-- 天麩羅も始めました-->
+                        !
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 自画像コメント追加欄 -->
+        <section class="section" id="user-comments">
+            <h2>Share Your Comment & Photo</h2>
+
+            <form id="comment-form" style="margin-bottom: 30px">
+                <input
+                    type="text"
+                    id="user-name"
+                    placeholder="Your Name"
+                    style="width: 100%; margin-bottom: 10px"
+                /><br />
+                <textarea
+                    placeholder="Write your comment..."
+                    id="comment-text"
+                    style="width: 100%; height: 80px; margin-bottom: 10px"
+                ></textarea
+                ><br />
+                <input
+                    type="file"
+                    id="avatar-upload"
+                    accept="image/*"
+                    style="margin-bottom: 10px"
+                /><br />
+                <button
+                    type="button"
+                    id="submit-comment"
+                    style="padding: 10px 20px"
+                >
+                    Submit
+                </button>
+            </form>
+
+            <div id="comments-list"></div>
+        </section>
+        <!-- 自画像コメント追加欄 -->
+
+        <!-- 新しいところ -->
+        <footer
+            style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                background-color: #333;
+                color: #f7e7ce;
+            "
+        >
+            <div>&copy; 2025 Sushi Party. All rights reserved.</div>
+
+            <div style="display: flex; gap: 10px">
+                <a
+                    href="https://instagram.com/sushiparty_official"
+                    target="_blank"
+                >
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                        alt="Instagram"
+                        style="width: 28px; height: 28px"
+                    />
+                </a>
+                <a
+                    href="https://twitter.com/sushiparty_official"
+                    target="_blank"
+                >
+                    <img
+                        src="https://abs.twimg.com/favicons/twitter.2.ico"
+                        alt="X (Twitter)"
+                        style="width: 28px; height: 28px"
+                    />
+                </a>
+                <a href="https://wa.me/yourwhatsapplink" target="_blank">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                        alt="WhatsApp"
+                        style="width: 28px; height: 28px"
+                    />
+                </a>
+            </div>
+        </footer>
+
+        <script src="./assets/js/script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
@@ -240,87 +373,5 @@
                 calendar.render();
             });
         </script>
-        <!-- カレンダー終了 -->
-
-
-<!-- 新しいところ -->
-<section class="section" id="pricing">
-    <h2>Pricing</h2>
-    <ul>
-        <li>3 Hours: £1,000🌊</li>
-        <li>5 Hours: £1,500🪼</li>
-    </ul>
-</section>
-
-<section class="section" id="news">
-    <h2>Latest News</h2>
-
-    <div class="news-list">
-        <div class="news-item">
-            <img src="./assets/img/….jpeg" alt="News 1">
-            <p>We use fresh fish from the UK, sourced from the North Sea, the Atlantic Ocean, and the Scottish coast.</p>
-        </div>
-       
-        <div class="news-item">
-            <img src="./assets/img/炙り牛寿司.jpeg" alt="News 2">
-            <p>We’ve started serving meat sushi.
-
-
-            <!--肉寿司始めました-->
-　　　　　</p>
-        </div>
-        <div class="news-item">
-            <img src="./assets/img/天ぷら　盛り合わせ - Adobe Stock でこのストック画像を購入して、類似の画像をさらに検索….jpeg" alt="News 3">
-            <p>We’ve also started serving tempura.
-.
-                <!-- 天麩羅も始めました-->
-!</p>
-        </div>
-    </div>
-</section>
-
-<!-- 自画像コメント追加欄 -->
-<section class="section" id="user-comments">
-    <h2>Share Your Comment & Photo</h2>
-
-    <form id="comment-form" style="margin-bottom: 30px;">
-        <input type="text" id="user-name" placeholder="Your Name" style="width: 100%; margin-bottom: 10px;"><br>
-        <textarea placeholder="Write your comment..." id="comment-text" style="width: 100%; height: 80px; margin-bottom: 10px;"></textarea><br>
-        <input type="file" id="avatar-upload" accept="image/*" style="margin-bottom: 10px;"><br>
-        <button type="button" id="submit-comment" style="padding: 10px 20px;">Submit</button>
-    </form>
-
-    <div id="comments-list"></div>
-</section>
-<!-- 自画像コメント追加欄 -->
-
-
-
-<!-- 新しいところ -->
-    <footer style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #333; color: #F7E7CE;">
-    <div>&copy; 2025 Sushi Party. All rights reserved.</div>
-    
-    <div style="display: flex; gap: 10px;">
-        <a href="https://instagram.com/sushiparty_official" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
-                 alt="Instagram" 
-                 style="width: 28px; height: 28px;">
-        </a>
-        <a href="https://twitter.com/sushiparty_official" target="_blank">
-            <img src="https://abs.twimg.com/favicons/twitter.2.ico"
-                 alt="X (Twitter)"
-                 style="width: 28px; height: 28px;">
-        </a>
-        <a href="https://wa.me/yourwhatsapplink" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                 alt="WhatsApp"
-                 style="width: 28px; height: 28px;">
-        </a>
-    </div>
-    </footer>
-    
-</footer>
-
-        <script src="./assets/js/script.js"></script>
     </body>
 </html>
