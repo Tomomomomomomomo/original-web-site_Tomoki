@@ -6,6 +6,8 @@
         <title>Sushi Party</title>
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./events.json">
+        
     </head>
 
     <body>
@@ -17,7 +19,7 @@
                 align-items: center;
                 padding: 20px;
                 font-family: 'Times New Roman', 'MS Mincho', serif;
-                background-color: #333;
+                background-color: #363131;
                 color: #f7e7ce;
                 border-bottom: 2px solid #d4af37;
                 overflow: hidden;
@@ -75,8 +77,13 @@
             </div>
         </header>
 
+
         <nav>
             <a href="#contact">Contact</a>
+            <a href="#calendar-section">calender</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#news">News</a>
+
         </nav>
 
         <section class="hero" id="home">
@@ -84,8 +91,13 @@
             <p>Enjoy the best sushi and drinks with friends!</p>
         </section>
 
-        <section class="section" id="menu">
-            <h2>Our Menu</h2>
+
+  </div>
+</section>
+
+            <h2 style="font-size: 32px; text-align: center;">Our Menu</h2>
+
+
             <div class="menu">
                 <div class="menu-item">
                     <img
@@ -93,7 +105,8 @@
                         alt="Tuna Sushi"
                     />
                     <h3>Tuna Sushi</h3>
-                    <p>Fresh from Tsukiji Market, Japan.</p>
+                    <p>Fresh slices of tuna with rich umami flavor</p>
+                    <!-- 旨みたっぷりの新鮮なマグロ -->
                 </div>
                 <div class="menu-item">
                     <img
@@ -101,7 +114,8 @@
                         alt="Salmon Sushi"
                     />
                     <h3>Salmon Sushi</h3>
-                    <p>Norwegian premium salmon.</p>
+                    <p>Silky and tender salmon with a buttery taste</p>
+                    <!-- バターのような口溶けのやわらかいサーモン -->
                 </div>
                 <div class="menu-item">
                     <img
@@ -109,7 +123,8 @@
                         alt="Yellowtail Sushi"
                     />
                     <h3>Yellowtail Sushi</h3>
-                    <p>Wild-caught from the Pacific Ocean.</p>
+                    <p>Mild and juicy yellowtail with a clean finish</p>
+                    <!-- さっぱりとした後味のジューシーなハマチ -->
                 </div>
                 <div class="menu-item">
                     <img
@@ -117,17 +132,21 @@
                         alt="Fatty Tuna Sushi"
                     />
                     <h3>Avocado Sushi</h3>
-                    <p>Locally sourced from Okinawa, Japan.</p>
+                    <p>Creamy avocado that melts in your mouth</p>
+                    <!-- とろけるようなクリーミーなアボカド -->
                 </div>
                 <div class="menu-item">
                     <img src="./assets/img/Unagi.jpeg" alt="Eel Sushi" />
                     <h3>Eel Sushi</h3>
-                    <p>Sweet and fluffy tamago made in-house.</p>
+                    <p>Grilled eel glazed with sweet soy sauce</p>
+                    <!-- 甘辛いタレを絡めた香ばしいウナギ -->
+
                 </div>
                 <div class="menu-item">
                     <img src="./assets/img/_.jpeg" alt="Egg Sushi" />
                     <h3>Egg Sushi</h3>
-                    <p>Fresh Alaskan crab meat.</p>
+                    <p>Sweet layered omelette made with dashi</p>
+                    <!-- だし香る甘い卵焼き -->
                 </div>
                 <div class="menu-item">
                     <img
@@ -135,10 +154,32 @@
                         alt="Sea Urchin Sushi"
                     />
                     <h3>Shrimp Sushi</h3>
-                    <p>Hokkaido's finest uni.</p>
+                    <p>Tender shrimp with a natural sweetness</p>
+                    <!-- ぷりぷりで甘みのあるエビ。 -->
                 </div>
+                                <div class="menu-item">
+                    <img
+                        src="./assets/img/いくら.jpeg"
+                        alt="Salmon Roe Sushi"
+                    />
+                    <h3>Salmon Roe Sushi</h3>
+                    <p>Fresh salmon roe with a salty pop, sourced from premium Atlantic salmon in Scotland</p>
+                    <!--スコットランド産の高品質なアトランティックサーモンから仕入れた新鮮なイクラ。塩味が弾ける食感。 -->
+                </div>
+                                <div class="menu-item">
+                    <img
+                        src="./assets/img/🦑.jpeg"
+                        alt=" Squid Sushi"
+                    />
+                    <h3> Squid Sushi</h3>
+                    <p> Tender North Sea squid, lightly sweet with a clean ocean taste.</p>
+                    <!-- 北海産のイカは柔らかく、ほんのり甘みがあり澄んだ海の風味が広がります -->
+                </div>
+
+
             </div>
         </section>
+
 
         <h2 id="contact" style="font-size: 2.5rem; text-align: center">Contact Us</h2>
         <div
@@ -198,7 +239,7 @@
                     style="
                         padding: 15px 30px;
                         font-size: 1.1rem;
-                        background-color: #3d3576;
+                        background-color: #d4af37;
                         color: rgb(246, 244, 244);
                         border: none;
                         border-radius: 5px;
@@ -221,10 +262,25 @@
         </div>
         <!-- カレンダー -->
 
-        <section class="section" id="calendar-section">
-            <h2>Sushi Calendar</h2>
-            <div id="calendar"></div>
+<section class="section" id="calendar-section">
+        <h1 style="font-size: 3rem; color:white;">Sushi Calendar</h1>
+
+        <div id="calendar"></div>
         </section>
+        <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      locale: 'en',
+      events: 'events.json' // ← ここで外部から読み込み
+    });
+
+    calendar.render();
+  });
+</script>
+
 
         <!-- カレンダー終了 -->
 
@@ -236,6 +292,7 @@
                 <li>5 Hours: £1,500🪼</li>
             </ul>
         </section>
+
 
         <section class="section" id="news">
             <h2>Latest News</h2>
@@ -259,7 +316,7 @@
                 </div>
                 <div class="news-item">
                     <img
-                        src="./assets/img/天ぷら　盛り合わせ - Adobe Stock でこのストック画像を購入して、類似の画像をさらに検索….jpeg"
+                        src="./assets/img/天麩羅２.jpg"
                         alt="News 3"
                     />
                     <p>
@@ -271,38 +328,48 @@
             </div>
         </section>
 
+        <!-- 自己紹介 -->
+        
+<section style="display: flex; justify-content: space-between; align-items: center; padding: 60px 0; background-color: #f7f7f7; color: black;">
+  <div style="flex: 1; padding: 0 40px;">
+    <h2 style="font-size: 36px; font-weight: bold; color: black;">OUR MESSAGE</h2>
+
+    <!-- <p style="color: #f25c05; margin-bottom: 10px;">CEOメッセージ</p> -->
+    <p style="line-height: 1.8; margin-bottom: 10px;">
+    <p style="margin-top: 20px; line-height: 1.8; font-size: 16px; color: #333;"></p>
+    <p style="line-height: 1.8; margin-bottom: 10px;">
+
+
+
+
+We are experienced sushi chefs with over five years of hands-on expertise.
+We have continuously refined our skills, guided by traditional techniques and a deep passion for sharing the authentic taste of Japan.
+
+Every piece of sushi we prepare reflects the care, precision, and dedication rooted in Japanese culinary culture.
+Now in the UK, we are excited to introduce this tradition to more people.
+
+Whether you're new to sushi or a longtime fan, we invite you to enjoy each piece made with heartfelt craftsmanship.
+
+<!-- 私たちは、5年以上の実務経験を持つ、腕の確かな寿司職人です
+私たちは寿司の技術を磨き続け、伝統的な手法と、日本の味を届けたいという情熱を持っています
+
+一貫一貫に込められた丁寧な仕事とこだわりは、日本の料理文化そのもの。
+現在イギリスで、より多くの人々にその魅力を伝えるために活動を始めています。
+
+寿司が初めての方も、長年のファンの方も、ぜひ心を込めて握られた一貫をお楽しみください。 -->
+
+
+    </p>
+    <p style="margin-top: 20px;">Tomoki Yamada</p>
+  </div>
+  <div style="flex: 1; text-align: center;">
+    <img src="./assets/img/4014B06A-B041-4A6D-AC65-0CFA201B788C_4_5005_c.jpeg" alt="" style="max-width: 80%; border-radius: 8px;" />
+
+
+  </div>
+</section>
+
         <!-- 自画像コメント追加欄 -->
-        <section class="section" id="user-comments">
-            <h2>Share Your Comment & Photo</h2>
-
-            <form id="comment-form" style="margin-bottom: 30px">
-                <input
-                    type="text"
-                    id="user-name"
-                    placeholder="Your Name"
-                    style="width: 100%; margin-bottom: 10px"
-                /><br />
-                <textarea
-                    placeholder="Write your comment..."
-                    id="comment-text"
-                    style="width: 100%; height: 80px; margin-bottom: 10px"
-                ></textarea
-                ><br />
-                <input
-                    type="file"
-                    id="avatar-upload"
-                    accept="image/*"
-                    style="margin-bottom: 10px"
-                /><br />
-                <button
-                    type="button"
-                    id="submit-comment"
-                    style="padding: 10px 20px"
-                >
-                    Submit
-                </button>
-            </form>
-
             <div id="comments-list"></div>
         </section>
         <!-- 自画像コメント追加欄 -->
@@ -360,9 +427,9 @@
                 var calendar = new FullCalendar.Calendar(calendarEl, {
                     initialView: "dayGridMonth",
                     headerToolbar: {
-                        left: "prev,next today",
+                        // left: "prev,next today",
                         center: "title",
-                        right: "dayGridMonth,timeGridWeek,listWeek",
+                        // right: "dayGridMonth,timeGridWeek,listWeek",
                     },
                     events: [
                         // イベント例

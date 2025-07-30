@@ -1,3 +1,8 @@
+events: 'events.json'
+
+
+
+
 let cursorIcons = [
   "https://emojiapi.dev/api/v1/1f41f/64.png", // 🐟
   "https://emojiapi.dev/api/v1/1f421/64.png", // 🐡
@@ -128,6 +133,8 @@ document.getElementById('submit-comment').addEventListener('click', function() {
     document.getElementById('comment-text').value = '';
     document.getElementById('avatar-upload').value = '';
 });
+
+
 
 
 
